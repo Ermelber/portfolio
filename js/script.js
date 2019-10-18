@@ -42,7 +42,7 @@ function initMenuItems()
 
     menuItems.forEach(function(e)
     {
-        var isActive = activeUrl.toLowerCase().endsWith(e.url.toLowerCase()) || (e.isIndex ? activeUrl.toLowerCase().endsWith("ermelber.github.io/portfolio/") : false);
+        var isActive = activeUrl.toLowerCase().endsWith(e.url.toLowerCase()) || (e.isIndex ? activeUrl.toLowerCase().endsWith("portfolio/") : false);
         var hasChildren = e.children != null;
         var children = "";
 
