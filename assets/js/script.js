@@ -3,8 +3,8 @@ var menuItems =
 [
     { 
         text : "Home",
-        url : "index.htm",
-        alias: "portfolio/",
+        url : "/portfolio/",
+        alias: "/portfolio/index.htm",
         children : null
     },
     { 
@@ -29,8 +29,8 @@ var menuItems =
     },
     { 
         text : "Contact",
-        url : "contact/index.htm",
-        alias: "contact/",
+        url : "/portfolio/contact/",
+        alias: "/portfolio/contact/index.htm",
         children : null
     }
 ]
@@ -42,7 +42,7 @@ function initMenuItems()
 
     menuItems.forEach(function(e)
     {
-        var isActive = activeUrl.toLowerCase().endsWith(e.url.toLowerCase()) || (e.isIndex ? activeUrl.toLowerCase().endsWith("portfolio/") : false);
+        var isActive = activeUrl.toLowerCase().endsWith(e.url.toLowerCase()) || activeUrl.toLowerCase().endsWith(e.alias.toLowerCase());
         var hasChildren = e.children != null;
         var children = "";
 
@@ -51,7 +51,7 @@ function initMenuItems()
             children += `<div class="dropdown-menu">`;
             e.children.forEach(function(c)
             {
-                var isChildrenActive = activeUrl.toLowerCase().endsWith(c.url.toLowerCase());
+                var isChildrenActive = activeUrl.toLowerCase().endsWith(c.url.toLowerCase()) || activeUrl.toLowerCase().endsWith(c.alias.toLowerCase());
                 children += `<a class="dropdown-item ${isChildrenActive ? 'active' : ''}" href="${c.url}">${c.text}</a>`
 
                 if (isChildrenActive) isActive = true;
