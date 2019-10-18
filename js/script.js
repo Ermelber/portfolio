@@ -4,11 +4,13 @@ var menuItems =
     { 
         text : "Home",
         url : "index.htm",
+        isIndex: true,
         children : null
     },
     { 
         text : "Projects",
         url : "#",
+        isIndex : false,
         children : 
         [
             { 
@@ -28,6 +30,7 @@ var menuItems =
     { 
         text : "Contact",
         url : "contact.htm",
+        isIndex : false,
         children : null
     }
 ]
@@ -39,23 +42,30 @@ function initMenuItems()
 
     menuItems.forEach(function(e)
     {
-        var isActive = activeUrl.toLowerCase().endsWith(e.url.toLowerCase()) ? "active" : "";
+        var isActive = activeUrl.toLowerCase().endsWith(e.url.toLowerCase()) || (e.isIndex ? activeUrl.toLowerCase().endsWith("ermelber.github.io/portfolio/") : false);
         var hasChildren = e.children != null;
-        var item = 
-        `<li class="nav-item ${isActive} ${hasChildren ? 'dropdown' : ''}">
-            <a class="nav-link ${hasChildren ? 'dropdown-toggle' : ''}" ${hasChildren ? 'data-toggle="dropdown"' : ''} href="${e.url}">
-                ${e.text}
-            </a>`;
+        var children = "";
+
         if (hasChildren)
         {
-            item += `<div class="dropdown-menu">`;
+            children += `<div class="dropdown-menu">`;
             e.children.forEach(function(c)
             {
-                item += `<a class="dropdown-item" href="${c.url}">${c.text}</a>`
+                var isChildrenActive = activeUrl.toLowerCase().endsWith(c.url.toLowerCase());
+                children += `<a class="dropdown-item ${isChildrenActive ? 'active' : ''}" href="${c.url}">${c.text}</a>`
+
+                if (isChildrenActive) isActive = true;
             });
-            item += "</div>";
+            children += "</div>";
         }
-        item += "</li>";
+
+        var item = 
+        `<li class="nav-item ${isActive ? 'active' : ''} ${hasChildren ? 'dropdown' : ''}">
+            <a class="nav-link ${hasChildren ? 'dropdown-toggle' : ''}" ${hasChildren ? 'data-toggle="dropdown"' : ''} href="${e.url}">
+                ${e.text}
+            </a>
+            ${children}
+        </li>`;
         $("#navbarItems").append(item);
     });
 }
