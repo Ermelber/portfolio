@@ -10,20 +10,23 @@ var menuItems =
     { 
         text : "Projects",
         url : "#",
-        alias: null,
+        alias: "#",
         children : 
         [
             { 
                 text : "Ermii Kart DS",
-                url : "#"
+                url : "#",
+                alias: "#"
             },
             { 
                 text : "NeoDori",
-                url : "#"
+                url : "#",
+                alias: "#"
             },
             { 
                 text : "Mario Kart Toolbox",
-                url : "#"
+                url : "#",
+                alias: "#"
             }
         ]
     },
