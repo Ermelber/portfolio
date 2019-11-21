@@ -1,0 +1,34 @@
+{
+    "items" : [
+        {
+            "text" : "Home",
+            "href" : "index.htm"
+        },
+        {
+            "text" : "About me",
+            "href" : "about-me.htm"
+        },
+        {
+            "text" : "Projects",
+            "href" : "#",
+            "items" : [
+                {
+                    "text" : "Ermii Kart DS",
+                    "href" : "projects/ekds.htm"
+                },
+                {
+                    "text" : "NeoDori",
+                    "href" : "projects/neodori.htm"
+                },
+                {
+                    "text" : "Mario Kart Toolbox",
+                    "href" : "projects/mktoolbox.htm"
+                }
+            ]
+        },
+        {
+            "text" : "Contact",
+            "href" : "contact.htm"
+        }
+    ]
+}

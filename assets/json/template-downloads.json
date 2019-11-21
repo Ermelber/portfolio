@@ -1,0 +1,20 @@
+{
+    "items" : 
+    [
+        {
+            "image": "../assets/images/content/trainz/thomas.png",
+            "link": "#",
+            "bottomText": "Bottom Text 1"
+        },
+        {
+            "image": "../assets/images/content/trainz/thomas.png",
+            "link": "#",
+            "bottomText": "Bottom Text 2"
+        },
+        {
+            "image": "../assets/images/content/trainz/thomas.png",
+            "link": "#",
+            "bottomText": "Bottom Text 3"
+        }
+    ]
+}

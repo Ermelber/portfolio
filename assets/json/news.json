@@ -1,0 +1,20 @@
+{
+    "title" : "NEWS",
+    "items" : 
+    [
+        {
+            "image": "https://static.wixstatic.com/media/a2ae3b_dd1fcaf128424dec998f3c30d8867f5f~mv2.png/v1/fill/w_197,h_197,al_c,q_80,usm_0.66_1.00_0.01/a2ae3b_dd1fcaf128424dec998f3c30d8867f5f~mv2.webp",
+            "title" : "A Day Out with Workshops!",
+            "subtitle" : "11/10/19",
+            "content" : "Today marks the end of our Day Out with Thomas competition. We have 5 glorious entries from very talented entrants all showcasing a small part of Day Out with Thomas (and its competitor's) events.<br/><br/>Check out our Contest page for our honorable mentions and make sure to search our Standard Gauge Rolling Stock and our Original\/Alternate Character pages for our top three winners. Thanks again to all who entered, and see you for the next contest!",
+            "bottomText": "-Robert"
+        },
+        {
+            "image": "https://static.wixstatic.com/media/a2ae3b_b79b3bb44f324f92af9f8240fc6e4a02~mv2.png/v1/fill/w_197,h_197,al_c,q_80,usm_0.66_1.00_0.01/a2ae3b_b79b3bb44f324f92af9f8240fc6e4a02~mv2.webp",
+            "title" : "A splendid release!",
+            "subtitle" : "11/7/19",
+            "content" : "Today marks our first Railway Series TRS19 model from Camscott! Camscott has done a lovely job with this James, detailed textures and cab view for you to enjoy. Head over to the new TRS19 RWS tab for your Trainz today!<br/><br/><br/><br/><b>Note: This should be obvious, but this model is for TRS19 only.</b>",
+            "bottomText": "-Tomix"
+        }
+    ]
+}
